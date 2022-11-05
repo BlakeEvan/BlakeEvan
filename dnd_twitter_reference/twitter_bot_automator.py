@@ -56,20 +56,18 @@ class Dandd:
         for att_key_number in range(6):
             holder = roll_selected.pop()
             stat_library[det_list[att_key_number]] += holder
-        review_2 = f"Here's what your character's stats look like:"
         str1 = (stat_library['STR'] - 10) // 2
         dex1 = (stat_library['DEX'] - 10) // 2
         con1 = (stat_library['CON'] - 10) // 2
         int1 = (stat_library['INT'] - 10) // 2
         wis1 = (stat_library['WIS'] - 10) // 2
         cha1 = (stat_library['CHA'] - 10) // 2
-        review_2 += f"\nAbility...........Ability number.....Ability modifier" \
-                    f"\nSTR (Strength)..........  {stat_library['STR']}  ......    {str1:+g}" \
-                    f"\nDEX (Dexterity).........  {stat_library['DEX']}  ......    {dex1:+g}" \
-                    f"\nCON (Constitution)......  {stat_library['CON']}  ......    {con1:+g}" \
-                    f"\nINT (Intelligence)......  {stat_library['INT']}  ......    {int1:+g}" \
-                    f"\nWIS (Wisdom)............  {stat_library['WIS']}  ......    {wis1:+g}" \
-                    f"\nCHA (Charisma)..........  {stat_library['CHA']}  ......    {cha1:+g}"
+        review_2 =  f"STR .... {stat_library['STR']} .... {str1:+g}" \
+                    f"\nDEX .... {stat_library['DEX']} .... {dex1:+g}" \
+                    f"\nCON ... {stat_library['CON']} .... {con1:+g}" \
+                    f"\nINT ..... {stat_library['INT']} .... {int1:+g}" \
+                    f"\nWIS ..... {stat_library['WIS']} .... {wis1:+g}" \
+                    f"\nCHA .... {stat_library['CHA']} .... {cha1:+g}"
         return {"review_2": review_2, "con1": con1}
 
     def profession(self):
@@ -80,6 +78,6 @@ class Dandd:
         profession_list = ['barbarian', 'bard', 'cleric', 'druid', 'fighter', 'monk', 'paladin', 'ranger', 'rogue',
                            'sorcerer', 'warlock', 'wizard']
         char_profession = random.choice(profession_list)
-        review_3 = f"{char_name} the {char_race} {char_profession.title()}\n\t{char_phrase}" \
-                   f"\n{review_2}"
+        review_3 = f'{char_name} the {char_race} {char_profession.title()}\n\t"{char_phrase}"' \
+                   f'\n{review_2}'
         return review_3
