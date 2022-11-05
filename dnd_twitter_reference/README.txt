@@ -1,7 +1,7 @@
-This is a reference folder that shows how the DnD Character of the Day twitter account posts are created and posted.
+This is a reference folder that shows how the DnD Character of the Day Twitter account posts are created and posted.
 
-A specific api_keys.txt file has been omitted to protect privacy to the twitter account.  This file is used in the
-automator_execution.py script to post to the DnD Character of the Day twitter account automatically.
+A specific api_keys.txt file has been omitted to protect privacy to the Twitter account.  This file is used in the
+automator_execution.py script to post to the DnD Character of the Day Twitter account automatically.
 
 The process of the scripts in order are:
 1. twitter_bot_automator.py creates a DnD 5th edition character stat sheet according to the DnD 5th edition rules
