@@ -13,5 +13,5 @@ authenticator.set_access_token(access_token, access_token_secret)
 api = tweepy.API(authenticator, wait_on_rate_limit=True)
 
 api.update_status('First test tweet')
-# start = twitter_bot_automator.Dandd()
-# print(start.profession())
+start = twitter_bot_automator.Dandd()
+print(start.profession())
